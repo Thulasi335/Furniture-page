@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Layout</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      height: 100%;
+    }
+
+    .left-side {
+      width: 20%;
+      background-color: #f0f0f0;
+    }
+
+    .right-side {
+      width: 80%;
+    }
+    .photo-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+      }
+  
+      .photo {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+      .grid-item {
+        position: relative;
+        text-align: center;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-side">
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="search...">
+          </form>
+        <script>
+            document.getElementById('searchForm').addEventListener('submit', function(event) {
+              event.preventDefault();
+              const searchTerm = document.getElementById('searchInput').value;
+              console.log('Search term:', searchTerm);
+            });
+          </script>
+        <h4>Company</h4>
+        <option value="">All</option>
+        <option value="ikea">Ikea</option>
+        <option value="marcos">Marcos</option>
+        <option value="caressa">Caressa</option>
+        <option value="liddy">Liddy</option>
+    </div>
+    <div class="right-side">
+        <div class="photo-container">
+            <div class="grid-item">
+                <img src="https://course-api.com/images/store/product-1.jpeg" class="img-responsive" width="300px" height="200px" alt="Image">
+                <p>High-Back Bench</p>
+                <p>9.99</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://course-api.com/images/store/product-2.jpeg" class="img-responsive" width="300px" height="200px" alt="Image">
+                <p>Albany Table</p>
+                <p>79.99</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://course-api.com/images/store/product-3.jpeg" class="img-responsive" width="300px" height="200px" alt="Image">
+                <p>Accent Chair</p>
+                <p>25.99</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://course-api.com/images/store/product-4.jpeg" class="img-responsive" width="300px" height="200px" alt="Image">
+                <p>Wooden Table</p>
+                <p>45.99</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://course-api.com/images/store/product-5.jpeg" class="img-responsive" width="300px" height="200px" alt="Image">
+                <p>Dining Table</p>
+                <p>6.99</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://course-api.com/images/store/product-6.jpeg" class="img-responsive" width="300px" height="200px" alt="Image">
+                <p>Sofa Set</p>
+                <p>69.99</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://course-api.com/images/store/product-7.jpeg" class="img-responsive" width="300px" height="200px" alt="Image">
+                <p>Modern Bookshelf</p>
+                <p>8.99</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://course-api.com/images/store/product-8.jpeg" class="img-responsive" width="300px" height="200px" alt="Image">
+                <p>Emperor Bed</p>
+                <p>21.99</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://course-api.com/images/store/product-9.jpeg" class="img-responsive" width="300px" height="200px" alt="Image">
+                <p>Utopia Sofa</p>
+                <p>39.95</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://course-api.com/images/store/product-10.jpeg" class="img-responsive" width="300px" height="200px" alt="Image">
+                <p>Entertainment Center</p>
+                <p>29.98</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://course-api.com/images/store/product-11.jpeg" class="img-responsive" width="300px" height="200px" alt="Image">
+                <p>Albany Sectional</p>
+                <p>10.99</p>
+            </div>
+            <div class="grid-item">
+                <img src="https://course-api.com/images/store/product-12.jpeg" class="img-responsive" width="300px" height="200px" alt="Image">
+                <p>Leather Sofa</p>
+                <p>9.99</p>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
